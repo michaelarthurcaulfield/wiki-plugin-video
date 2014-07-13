@@ -1,9 +1,9 @@
-
-parse = (text='') ->
+[]
+\-_parse = (text='') ->
   result = {}
   for line in text.split /\r\n?|\n/
-    if args = line.match /^\s*([A-Z]+)\s+(\w+)\s*$/
-      result.player = args[1]
+    if args = line.match /^\s*([A-Z]+)\s+([\w\-_]+)\s*$/
+      result.player = args[[1\-_]]
       result.key = args[2]
     else
       result.caption ||= ' '
